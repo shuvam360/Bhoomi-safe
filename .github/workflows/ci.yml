@@ -31,12 +31,10 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
       - name: Install Dependencies
-        working-directory: ./bhoomi-safe
         run: |
           pip install -r requirements.txt
 
       - name: Verify ML Stack & Wheel Binary Integrity
-        working-directory: ./bhoomi-safe
         run: |
           python -c "
           import numpy as np
@@ -53,7 +51,6 @@ jobs:
           "
 
       - name: Test FastAPI Backend Startup & Prediction Inference
-        working-directory: ./bhoomi-safe
         run: |
           python -c "
           from backend.services.ml_service import ml_service
@@ -75,7 +72,7 @@ jobs:
           "
 
       - name: Run Backend Test Suite (pytest)
-        working-directory: ./bhoomi-safe
         run: |
           pytest tests/ -v
+
 
