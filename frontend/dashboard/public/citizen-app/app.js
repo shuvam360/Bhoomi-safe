@@ -8,7 +8,26 @@
 const DB_NAME = 'BhoomiSafeDB';
 const DB_VERSION = 1;
 const STORE_NAME = 'offlineReports';
-const API_URL = 'http://localhost:8000/api/v1/reports';
+
+const getBaseApiUrl = () => {
+  if (window.__BHOOMI_API_URL__ && !window.__BHOOMI_API_URL__.startsWith('%')) {
+    return window.__BHOOMI_API_URL__;
+  }
+  try {
+    const urlParam = new URLSearchParams(window.location.search).get('api');
+    if (urlParam) {
+      localStorage.setItem('bhoomi_api_url', urlParam);
+      return urlParam;
+    }
+    const stored = localStorage.getItem('bhoomi_api_url');
+    if (stored) return stored;
+  } catch (e) {
+    // Ignore storage errors in restricted contexts
+  }
+  return 'http://localhost:8000';
+};
+
+const API_URL = `${getBaseApiUrl().replace(/\/+$/, '')}/api/v1/reports`;
 
 let isSyncing = false;
 

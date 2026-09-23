@@ -5,6 +5,7 @@ import {
 } from 'recharts';
 import { BarChart3, TrendingUp, Cpu, Database, PieChart as PieIcon, ShieldCheck } from 'lucide-react';
 import StatCard from '../components/StatCard';
+import { getApiUrl } from '../utils/api';
 
 const rainfallTrendData = [
   { day: 'Mon', rainfall: 45, riskScore: 22, antecedent: 120 },
@@ -52,7 +53,7 @@ export default function Analytics() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/v1/predict/model-metrics')
+    fetch(getApiUrl('/api/v1/predict/model-metrics'))
       .then(res => res.json())
       .then(data => {
         if (data && data.roc_auc) {

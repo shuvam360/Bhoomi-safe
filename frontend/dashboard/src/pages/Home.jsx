@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getApiUrl } from '../utils/api';
 import RiskMap from '../components/RiskMap';
 import StatCard from '../components/StatCard';
 import AlertBanner from '../components/AlertBanner';
@@ -61,7 +62,7 @@ export default function Home() {
   const fetchDistricts = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/v1/predict/districts');
+      const res = await fetch(getApiUrl('/api/v1/predict/districts'));
       if (res.ok) { const d = await res.json(); setDistricts(d.districts || []); }
       else setDistricts(FALLBACK_DISTRICTS);
     } catch { setDistricts(FALLBACK_DISTRICTS); }
@@ -79,7 +80,7 @@ export default function Home() {
     setWeatherError('');
     setIsFetchingWeather(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/predict/live-weather?query=${encodeURIComponent(loc)}`);
+      const res = await fetch(getApiUrl(`/api/v1/predict/live-weather?query=${encodeURIComponent(loc)}`));
       if (!res.ok) throw new Error('Live weather service failed');
       const data = await res.json();
 
@@ -102,7 +103,7 @@ export default function Home() {
       // Instantly run inference with the live retrieved meteorological inputs
       setIsSimulating(true);
       try {
-        const predRes = await fetch('http://localhost:8000/api/v1/predict', {
+        const predRes = await fetch(getApiUrl('/api/v1/predict'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(newForm)
@@ -136,7 +137,7 @@ export default function Home() {
     setIsSimulating(true);
     setSimulationResult(null);
     try {
-      const res = await fetch('http://localhost:8000/api/v1/predict', {
+      const res = await fetch(getApiUrl('/api/v1/predict'), {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });

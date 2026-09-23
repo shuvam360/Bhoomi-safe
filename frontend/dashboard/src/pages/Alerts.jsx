@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, CheckCircle, ShieldAlert, Filter, Send } from 'lucide-react';
 import RiskBadge from '../components/RiskBadge';
+import { getApiUrl } from '../utils/api';
 
 export default function Alerts() {
   const [alerts, setAlerts] = useState([]);
@@ -19,7 +20,7 @@ export default function Alerts() {
   const fetchAlerts = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/v1/alerts');
+      const res = await fetch(getApiUrl('/api/v1/alerts'));
       if (res.ok) {
         const data = await res.json();
         setAlerts(data.alerts || []);
@@ -49,7 +50,7 @@ export default function Alerts() {
 
   const handleDeactivate = async (id) => {
     try {
-      await fetch(`http://localhost:8000/api/v1/alerts/${id}/deactivate`, {
+      await fetch(getApiUrl(`/api/v1/alerts/${id}/deactivate`), {
         method: 'PATCH',
         headers: {
           'X-API-Key': 'bhoomi-admin-key-2026'
@@ -64,7 +65,7 @@ export default function Alerts() {
   const handleCreateAlert = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:8000/api/v1/alerts', {
+      const res = await fetch(getApiUrl('/api/v1/alerts'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

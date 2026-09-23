@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bhoomi-safe-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.10
+      - key: BHOOMI_API_KEY
+        value: bhoomi-admin-key-2026
+      - key: CARTO_API_KEY
+        value: cb1_3v9f_1_db37a53db18da3d4cf8ebd00
+      - key: IMD_API_BASE_URL
+        value: https://api.open-meteo.com/v1/forecast
+      - key: OPENWEATHERMAP_API_KEY
+        sync: false

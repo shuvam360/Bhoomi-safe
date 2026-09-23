@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { getApiUrl, API_BASE_URL } from '../utils/api';
 import { 
   CheckCircle2, 
   MapPin, 
@@ -62,7 +63,7 @@ export default function Reports() {
   const fetchReports = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/v1/reports');
+      const res = await fetch(getApiUrl('/api/v1/reports'));
       if (res.ok) {
         const data = await res.json();
         setReports(data.reports || []);
@@ -84,7 +85,7 @@ export default function Reports() {
     if (!verifyModalReport) return;
     setActionLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/reports/${verifyModalReport.id}/verify`, {
+      const res = await fetch(getApiUrl(`/api/v1/reports/${verifyModalReport.id}/verify`), {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +117,7 @@ export default function Reports() {
     if (!window.confirm(`Authorize government dispatch transmission for ${report.district}, ${report.state}?`)) return;
     setActionLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/reports/${report.id}/approve-govt-submission`, {
+      const res = await fetch(getApiUrl(`/api/v1/reports/${report.id}/approve-govt-submission`), {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -146,7 +147,7 @@ export default function Reports() {
     setHistoryModalReport(report);
     setHistoryLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/reports/${report.id}/history`);
+      const res = await fetch(getApiUrl(`/api/v1/reports/${report.id}/history`));
       if (res.ok) {
         const data = await res.json();
         setHistoryData(data.history || report.history || []);
@@ -169,7 +170,7 @@ export default function Reports() {
   const getMediaFullUrl = (path) => {
     if (!path) return '';
     if (path.startsWith('http://') || path.startsWith('https://')) return path;
-    return `http://localhost:8000${path}`;
+    return getApiUrl(path);
   };
 
   // Filter logic
