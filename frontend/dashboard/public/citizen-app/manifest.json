@@ -2,9 +2,9 @@
   "name": "BhoomiSafe — Citizen Landslide Portal (NER)",
   "short_name": "BhoomiSafe",
   "description": "AI-based citizen landslide incident reporting and emergency safety grid for North East India.",
-  "id": "/citizen-app/",
-  "start_url": "/citizen-app/report.html",
-  "scope": "/citizen-app/",
+  "id": "bhoomi-safe-citizen-app",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0d1b2a",
@@ -42,7 +42,7 @@
       "name": "Report Landslide",
       "short_name": "Report",
       "description": "Submit a quick ground incident report",
-      "url": "/citizen-app/report.html",
+      "url": "./report.html",
       "icons": [
         {
           "src": "icon-192.png",
@@ -54,7 +54,7 @@
       "name": "Safety Precautions",
       "short_name": "Safety",
       "description": "View monsoon safety protocols and helplines",
-      "url": "/citizen-app/index.html",
+      "url": "./index.html",
       "icons": [
         {
           "src": "icon-192.png",

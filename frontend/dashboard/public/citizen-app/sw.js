@@ -3,9 +3,8 @@
  * Enables offline capability and PWA installation criteria.
  */
 
-const CACHE_NAME = 'bhoomisafe-citizen-v1';
+const CACHE_NAME = 'bhoomisafe-citizen-v2';
 const STATIC_ASSETS = [
-  './',
   './index.html',
   './report.html',
   './style.css',
@@ -25,9 +24,9 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SW] Pre-caching offline citizen assets');
-      return cache.addAll(STATIC_ASSETS).catch((err) => {
-        console.warn('[SW] Some assets failed to precache:', err);
-      });
+      return Promise.allSettled(
+        STATIC_ASSETS.map((asset) => cache.add(asset))
+      );
     })
   );
   self.skipWaiting();
