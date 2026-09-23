@@ -10,6 +10,9 @@ jobs:
   test-and-verify:
     name: Test on Python ${{ matrix.python-version }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
+    env:
+      BHOOMI_API_KEY: bhoomi-admin-key-2026
+      JWT_SECRET_KEY: test-secret-key-for-ci-pipeline-2026
     strategy:
       fail-fast: false
       matrix:

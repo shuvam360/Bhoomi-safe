@@ -14,6 +14,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+# Guarantee test environment variables if not present in .env
+os.environ.setdefault("BHOOMI_API_KEY", "bhoomi-admin-key-2026")
+os.environ.setdefault("JWT_SECRET_KEY", "bhoomi-test-jwt-secret-key-2026")
+
 from backend.main import app
 from backend.limiter import limiter
 
