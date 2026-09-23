@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="app_title">Report Landslide — BhoomiSafe</title>
+  <!-- Favicon & PWA App Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="BhoomiSafe">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="citizen-app">
+    <header class="app-header">
+      <div class="header-left">
+        <a href="index.html" class="back-link" data-i18n="back_link">← Back</a>
+        <h2 class="header-page-title" data-i18n="form_heading">Report Landslide</h2>
+      </div>
+      <div class="header-actions">
+        <!-- Language Switcher Container -->
+        <div id="langSwitcherContainer"></div>
+        <!-- Download / Install as Web App Button on Far Right Corner -->
+        <button type="button" id="btnInstallApp" class="btn-install-app" title="Download & Install BhoomiSafe App" aria-label="Download App">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="install-label" data-i18n="btn_install_app">Install</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Network Connectivity Status Indicator -->
+    <div id="connectionStatus" class="connection-status-bar online" role="status" aria-live="polite">
+      <span class="status-dot"></span>
+      <span id="connectionText" data-i18n="conn_live">Live Connection — Emergency Grid Active</span>
+    </div>
+
+    <!-- Offline Queue Notice -->
+    <div id="queueNotice" class="queue-notice hidden" role="region" aria-label="Offline report queue">
+      <div class="queue-notice-content">
+        <span>📥 <strong id="queueCount">0</strong> <span data-i18n="queue_pending">report(s) queued on device</span></span>
+        <button type="button" id="btnManualSync" class="btn-sync-now" data-i18n="btn_sync_now">Sync Now</button>
+      </div>
+    </div>
+
+    <main class="content">
+      <form id="reportForm" class="card form-card">
+        <div class="form-group">
+          <label data-i18n="label_name">Your Name (Optional)</label>
+          <input type="text" id="reporter_name" data-i18n-placeholder="placeholder_name" placeholder="e.g. Anita Sharma">
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="label_phone">Phone Number (Optional)</label>
+          <input type="tel" id="reporter_phone" data-i18n-placeholder="placeholder_phone" placeholder="e.g. +91 98765 43210">
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="label_district">District *</label>
+          <select id="district" required>
+            <option value="Cherrapunji">Cherrapunji (Meghalaya)</option>
+            <option value="Jiribam">Jiribam (Manipur)</option>
+            <option value="Silchar">Silchar (Assam)</option>
+            <option value="Aizawl">Aizawl (Mizoram)</option>
+            <option value="Kohima">Kohima (Nagaland)</option>
+            <option value="Itanagar">Itanagar (Arunachal Pradesh)</option>
+            <option value="Shillong">Shillong (Meghalaya)</option>
+            <option value="Imphal">Imphal (Manipur)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="label_severity">Severity Level *</label>
+          <select id="severity" required>
+            <option value="LOW" data-i18n="sev_low">LOW — Minor soil creep / small rockfall</option>
+            <option value="MEDIUM" data-i18n="sev_medium">MEDIUM — Partial road blockage</option>
+            <option value="HIGH" data-i18n="sev_high">HIGH — Complete road block / structure damage</option>
+            <option value="CRITICAL" data-i18n="sev_critical">CRITICAL — Massive mudslide / casualties</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Incident Type *</label>
+          <select id="incident_type" required>
+            <option value="Landslide">Landslide (Mass rock/soil movement)</option>
+            <option value="Mudslide">Mudslide (Debris/mud flow)</option>
+            <option value="Rockfall">Rockfall (Falling boulders/rocks)</option>
+            <option value="Soil creep">Soil creep (Slow downward slope drift)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="label_gps">GPS Location</label>
+          <div class="gps-box">
+            <button type="button" id="btnGps" class="btn-gps" data-i18n="btn_gps">📍 Detect My Location</button>
+            <span id="gpsStatus" class="gps-status" data-i18n="gps_not_set">Not set</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="label_description">Description *</label>
+          <textarea id="description" rows="4" required data-i18n-placeholder="placeholder_description" placeholder="Describe what happened, road name, nearby landmarks..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Attach Photos (Optional)</label>
+          <input type="file" id="photos" accept="image/jpeg,image/png" multiple style="padding: 6px;" />
+          <small style="display: block; font-size: 0.72rem; color: #8899a6; margin-top: 4px;">JPG, PNG up to 10MB per image. Multiple photos supported.</small>
+        </div>
+
+        <div class="form-group">
+          <label>Attach Video (Optional)</label>
+          <input type="file" id="video" accept="video/mp4" style="padding: 6px;" />
+          <small style="display: block; font-size: 0.72rem; color: #8899a6; margin-top: 4px;">MP4 video up to 50MB.</small>
+        </div>
+
+        <button type="submit" id="btnSubmit" class="btn-primary-lg" data-i18n="btn_submit">Submit Emergency Incident Report</button>
+      </form>
+
+      <div id="responseMessage" class="response-message hidden" role="alert"></div>
+    </main>
+
+    <footer style="margin-top: 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px;">
+      <a href="http://localhost:5173/admin" target="_blank" style="color: #48cae4; text-decoration: none; font-size: 0.75rem;">
+        🛡️ Authorized Official & Admin Verification Portal →
+      </a>
+    </footer>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

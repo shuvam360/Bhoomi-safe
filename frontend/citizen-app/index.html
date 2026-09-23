@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="app_title">BhoomiSafe — Citizen Landslide Reporter | NER</title>
+  <!-- Favicon & PWA App Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="BhoomiSafe">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="citizen-app">
+    <!-- Header with Language Switcher and Download App Button in Top Right -->
+    <header class="app-header">
+      <div class="logo-box">
+        <img src="favicon.svg" alt="BhoomiSafe" class="brand-logo-img" width="32" height="32" />
+        <div class="brand-text">
+          <h1 class="brand-name">BhoomiSafe</h1>
+          <p class="brand-subtitle" data-i18n="app_subtitle">Citizen Portal (NER)</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div id="langSwitcherContainer"></div>
+        <!-- Download / Install as Web App Button on Far Right -->
+        <button type="button" id="btnInstallApp" class="btn-install-app" title="Download & Install BhoomiSafe App" aria-label="Download App">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="install-label" data-i18n="btn_install_app">Install</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Emergency Helpline Bar -->
+    <div class="emergency-bar">
+      <span><span data-i18n="helpline_text">🚨 National Disaster Helpline:</span> <a href="tel:1078"><strong>1078</strong></a></span>
+    </div>
+
+    <!-- Network Connectivity Status Indicator -->
+    <div id="connectionStatus" class="connection-status-bar online" role="status" aria-live="polite">
+      <span class="status-dot"></span>
+      <span id="connectionText" data-i18n="conn_live">Live Connection — Emergency Grid Active</span>
+    </div>
+
+    <!-- Offline Queue Notice -->
+    <div id="queueNotice" class="queue-notice hidden" role="region" aria-label="Offline report queue">
+      <div class="queue-notice-content">
+        <span>📥 <strong id="queueCount">0</strong> <span data-i18n="queue_pending">report(s) queued on device</span></span>
+        <button type="button" id="btnManualSync" class="btn-sync-now" data-i18n="btn_sync_now">Sync Now</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Call to Action Banner -->
+      <section class="hero-card">
+        <h2 data-i18n="hero_title">Report a Landslide or Road Block</h2>
+        <p data-i18n="hero_subtitle">Helps emergency responders & SDMAs send immediate rescue and clearing teams.</p>
+        <a href="report.html" class="btn-primary-lg" data-i18n="hero_btn">Submit Ground Incident Report</a>
+      </section>
+
+      <!-- Safety Guidelines -->
+      <section class="section">
+        <h3 data-i18n="guidelines_title" style="margin-bottom: 12px; font-size: 1rem;">Landslide Precaution Guidelines</h3>
+        <div class="grid">
+          <div class="card">
+            <h4 data-i18n="guide_rain_title">🌧️ High Rainfall Warning</h4>
+            <p data-i18n="guide_rain_desc">If sustained rainfall exceeds 150mm/24h, avoid travelling through hill passes like NH-37 or Shillong Bypass.</p>
+          </div>
+          <div class="card">
+            <h4 data-i18n="guide_sound_title">🔊 Listen for Warning Sounds</h4>
+            <p data-i18n="guide_sound_desc">Trees cracking, boulders knocking, or sudden increase in muddy stream flow indicate imminent landslide activity.</p>
+          </div>
+          <div class="card">
+            <h4 data-i18n="guide_vehicle_title">🚗 If Trapped in Vehicle</h4>
+            <p data-i18n="guide_vehicle_desc">Abandon vehicle immediately if mud or debris starts moving onto the road and seek higher ground on foot.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p data-i18n="footer_text">BhoomiSafe Citizen Portal — Powered by AI Early Warning Systems for North East Region India</p>
+      <p style="margin-top: 8px;">
+        <a href="http://localhost:5173/admin" target="_blank" style="color: #48cae4; text-decoration: none; font-size: 0.75rem;">
+          🛡️ Official / Admin Verification Desk →
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

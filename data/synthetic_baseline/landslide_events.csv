@@ -1,0 +1,31 @@
+event_id,district,state,latitude,longitude,date,time_of_occurrence,event_type,volume_m3,area_affected_ha,casualties,houses_damaged,road_blocked_km,trigger,rainfall_24h_mm,rainfall_72h_mm,slope_degrees,elevation_m,depth_m,verified
+LS001,Cherrapunji,Meghalaya,25.2833,91.7167,2023-06-15,06:30,Debris_Flow,45000,12.4,3,18,2.4,Rainfall,245.3,612.1,32.5,1290,4.2,True
+LS002,Jiribam,Manipur,24.8000,93.1167,2023-06-17,14:15,Rotational_Slide,28000,8.6,1,9,1.8,Rainfall,156.8,380.2,28.7,820,3.6,True
+LS003,Aizawl,Mizoram,23.7271,92.7176,2023-06-20,09:45,Translational_Slide,62000,18.2,5,32,3.6,Rainfall,178.2,445.1,35.8,1132,5.8,True
+LS004,Kohima,Nagaland,25.6751,94.1086,2023-06-21,11:20,Debris_Flow,38000,10.8,2,14,2.1,Rainfall,132.5,325.8,30.1,1444,3.9,True
+LS005,Itanagar,Arunachal Pradesh,27.0844,93.6053,2023-06-23,07:00,Rotational_Slide,72000,21.6,6,45,4.2,Rainfall,210.4,520.7,38.2,380,6.4,True
+LS006,Lunglei,Mizoram,22.8879,92.7378,2023-06-26,16:30,Debris_Flow,88000,26.4,8,58,5.1,Rainfall,198.7,496.3,40.2,980,7.2,True
+LS007,Tura,Meghalaya,25.5158,90.2122,2023-06-27,08:45,Translational_Slide,52000,15.6,4,26,3.2,Rainfall,167.4,418.5,33.6,328,4.8,True
+LS008,Mokokchung,Nagaland,26.3259,94.5162,2023-06-29,13:00,Rotational_Slide,41000,12.2,2,16,2.4,Rainfall,145.3,362.8,31.4,1326,4.1,True
+LS009,Pasighat,Arunachal Pradesh,28.0667,95.3333,2023-06-30,05:30,Debris_Flow,95000,28.8,9,72,5.8,Rainfall,188.6,471.2,36.9,155,8.2,True
+LS010,Nongpoh,Meghalaya,25.9005,91.8754,2023-07-02,10:15,Rock_Fall,18000,5.4,1,6,1.2,Rainfall,220.1,550.3,42.1,895,2.8,True
+LS011,Champhai,Mizoram,23.4617,93.3286,2023-07-03,15:45,Translational_Slide,48000,14.4,3,22,2.8,Rainfall,143.7,359.2,29.8,1070,4.4,True
+LS012,Churachandpur,Manipur,24.3333,93.6833,2023-07-04,07:20,Debris_Flow,64000,19.2,5,38,3.9,Rainfall,172.9,432.3,34.3,900,5.6,True
+LS013,Ukhrul,Manipur,25.1172,94.3568,2023-07-06,12:30,Rotational_Slide,56000,16.8,4,28,3.4,Rainfall,163.8,409.5,32.8,1820,5.2,True
+LS014,Dawki,Meghalaya,25.1667,92.0167,2023-07-08,06:00,Debris_Flow,108000,32.4,11,86,6.4,Rainfall,255.2,638.0,44.5,402,9.2,True
+LS015,Senapati,Manipur,25.2638,93.9594,2023-07-10,09:00,Rotational_Slide,78000,23.4,7,52,4.8,Rainfall,185.4,463.5,37.2,1556,6.8,True
+LS016,Ri Bhoi,Meghalaya,25.7489,91.9760,2023-07-12,14:00,Translational_Slide,58000,17.4,4,30,3.6,Rainfall,176.3,440.8,35.1,620,5.4,True
+LS017,West Garo Hills,Meghalaya,25.5293,90.1958,2023-07-15,08:30,Debris_Flow,84000,25.2,7,62,5.2,Rainfall,192.5,481.3,39.4,298,7.4,True
+LS018,Phek,Nagaland,25.6769,94.4596,2023-07-17,11:45,Rotational_Slide,47000,14.1,3,20,2.7,Rainfall,148.9,372.3,31.8,1524,4.3,True
+LS019,Anjaw,Arunachal Pradesh,28.0667,96.8333,2023-07-18,04:00,Debris_Flow,115000,34.5,12,94,7.2,Rainfall,205.7,514.3,41.2,2100,9.8,True
+LS020,Kamjong,Manipur,25.1000,94.6000,2023-07-19,13:30,Translational_Slide,61000,18.3,5,36,3.8,Rainfall,169.3,423.3,33.7,1200,5.5,True
+LS021,East Jaintia Hills,Meghalaya,25.3218,92.1809,2023-07-21,07:45,Debris_Flow,124000,37.2,14,108,8.1,Rainfall,237.6,594.0,43.8,720,10.4,True
+LS022,Tamenglong,Manipur,24.9831,93.5008,2023-07-23,10:00,Rotational_Slide,82000,24.6,7,56,5.1,Rainfall,194.8,487.0,38.5,1340,7.1,True
+LS023,Nongstoin,Meghalaya,25.5195,91.2591,2023-07-25,06:15,Debris_Flow,96000,28.8,10,78,6.2,Rainfall,214.3,535.8,42.6,1320,8.4,True
+LS024,Upper Siang,Arunachal Pradesh,28.1667,95.0000,2023-07-28,08:00,Debris_Flow,132000,39.6,15,118,8.9,Rainfall,218.4,546.0,43.2,1680,11.2,True
+LS025,Mairang,Meghalaya,25.5624,91.7134,2023-07-30,09:30,Translational_Slide,68000,20.4,5,44,4.2,Rainfall,182.6,456.5,36.4,780,6.0,True
+LS026,Saiha,Mizoram,22.4892,92.9704,2023-07-31,14:15,Rotational_Slide,52000,15.6,4,26,3.2,Rainfall,157.4,393.5,32.1,896,4.8,True
+LS027,Longding,Arunachal Pradesh,27.3667,95.5833,2023-08-02,05:00,Debris_Flow,104000,31.2,11,84,6.8,Rainfall,201.3,503.3,40.6,920,9.0,True
+LS028,Cherrapunji,Meghalaya,25.2641,91.7034,2022-07-18,08:20,Debris_Flow,58000,17.4,5,34,3.6,Rainfall,268.4,672.1,33.8,1312,5.2,True
+LS029,Aizawl,Mizoram,23.7314,92.7243,2022-08-05,11:00,Rotational_Slide,44000,13.2,3,22,2.8,Rainfall,162.5,406.3,36.2,1148,4.0,True
+LS030,Kohima,Nagaland,25.6823,94.1142,2022-09-12,06:45,Debris_Flow,36000,10.8,2,12,2.0,Rainfall,128.6,321.5,29.8,1456,3.6,True

@@ -1,0 +1,50 @@
+district,state,latitude,longitude,elevation_m,slope_degrees,aspect_degrees,curvature,drainage_density,fault_distance_km,lithology_code,lithology_name
+Cherrapunji,Meghalaya,25.2833,91.7167,1290,32.5,185,0.82,2.4,12.3,3,Limestone_Shale
+Guwahati,Assam,26.1445,91.7362,54,8.3,220,0.15,1.1,45.2,1,Alluvial
+Jiribam,Manipur,24.8000,93.1167,820,28.7,145,0.74,2.1,8.7,2,Sandstone_Shale
+Silchar,Assam,24.8333,92.8000,21,15.2,260,0.38,1.6,28.4,1,Alluvial
+Shillong,Meghalaya,25.5744,91.8830,1496,22.4,170,0.56,1.9,18.6,3,Gneiss_Granite
+Aizawl,Mizoram,23.7271,92.7176,1132,35.8,130,0.91,2.6,6.4,2,Sandstone_Shale
+Kohima,Nagaland,25.6751,94.1086,1444,30.1,210,0.78,2.3,9.8,3,Limestone_Shale
+Imphal,Manipur,24.8170,93.9368,786,12.6,195,0.32,1.4,35.7,1,Alluvial
+Itanagar,Arunachal Pradesh,27.0844,93.6053,380,38.2,160,0.95,2.7,5.2,2,Sandstone_Shale
+Agartala,Tripura,23.8315,91.2868,12,10.4,240,0.22,1.2,42.1,1,Alluvial
+Dimapur,Nagaland,25.9064,93.7228,232,7.8,205,0.12,1.0,52.8,1,Alluvial
+Lunglei,Mizoram,22.8879,92.7378,980,40.2,125,0.98,2.8,4.8,2,Sandstone_Shale
+Tura,Meghalaya,25.5158,90.2122,328,33.6,175,0.86,2.5,11.4,3,Limestone_Shale
+Tinsukia,Assam,27.4900,95.3600,112,9.1,230,0.18,1.1,48.6,1,Alluvial
+Mokokchung,Nagaland,26.3259,94.5162,1326,31.4,195,0.80,2.4,10.2,3,Limestone_Shale
+Pasighat,Arunachal Pradesh,28.0667,95.3333,155,36.9,150,0.93,2.6,5.8,2,Sandstone_Shale
+Diphu,Assam,25.8426,93.4340,315,18.4,215,0.46,1.7,32.4,1,Alluvial
+Nongpoh,Meghalaya,25.9005,91.8754,895,42.1,180,0.99,2.9,3.6,3,Gneiss_Granite
+Champhai,Mizoram,23.4617,93.3286,1070,29.8,140,0.76,2.2,7.9,2,Sandstone_Shale
+Churachandpur,Manipur,24.3333,93.6833,900,34.3,155,0.88,2.5,8.1,2,Sandstone_Shale
+Tezu,Arunachal Pradesh,27.9167,96.1667,212,16.7,200,0.42,1.6,38.5,1,Alluvial
+Ukhrul,Manipur,25.1172,94.3568,1820,32.8,165,0.84,2.4,9.3,3,Limestone_Shale
+Jorhat,Assam,26.7465,94.2026,87,8.4,225,0.16,1.1,46.8,1,Alluvial
+Dawki,Meghalaya,25.1667,92.0167,402,44.5,170,1.00,3.0,2.8,3,Limestone_Shale
+Serchhip,Mizoram,23.2953,92.8485,1012,28.5,135,0.73,2.1,8.4,2,Sandstone_Shale
+Senapati,Manipur,25.2638,93.9594,1556,37.2,160,0.94,2.7,5.6,2,Sandstone_Shale
+Hailakandi,Assam,24.6843,92.5626,25,14.3,250,0.36,1.5,30.2,1,Alluvial
+Ri Bhoi,Meghalaya,25.7489,91.9760,620,35.1,185,0.89,2.5,7.2,3,Gneiss_Granite
+Mamit,Mizoram,23.9249,92.4793,860,30.7,145,0.79,2.3,8.9,2,Sandstone_Shale
+Lakhimpur,Assam,27.2342,94.1027,96,10.2,220,0.21,1.2,44.3,1,Alluvial
+West Garo Hills,Meghalaya,25.5293,90.1958,298,39.4,165,0.97,2.8,4.5,3,Limestone_Shale
+Dibrugarh,Assam,27.4728,94.9120,108,8.7,235,0.17,1.1,49.2,1,Alluvial
+Phek,Nagaland,25.6769,94.4596,1524,31.8,200,0.82,2.4,9.5,3,Limestone_Shale
+Anjaw,Arunachal Pradesh,28.0667,96.8333,2100,41.2,155,0.99,2.9,3.8,2,Sandstone_Shale
+Kamjong,Manipur,25.1000,94.6000,1200,33.7,170,0.86,2.5,8.7,2,Sandstone_Shale
+Karimganj,Assam,24.8669,92.3569,18,11.8,245,0.28,1.3,40.6,1,Alluvial
+East Jaintia Hills,Meghalaya,25.3218,92.1809,720,43.8,175,1.00,2.9,3.2,3,Limestone_Shale
+Tamenglong,Manipur,24.9831,93.5008,1340,38.5,155,0.96,2.7,5.4,2,Sandstone_Shale
+Nagaon,Assam,26.3465,92.6862,62,9.6,228,0.20,1.2,47.4,1,Alluvial
+Nongstoin,Meghalaya,25.5195,91.2591,1320,42.6,180,1.00,2.9,3.4,3,Gneiss_Granite
+Kolasib,Mizoram,24.2200,92.6800,620,29.2,140,0.75,2.2,8.2,2,Sandstone_Shale
+Bishnupur,Manipur,24.6260,93.7748,790,12.4,200,0.31,1.4,36.8,1,Alluvial
+Upper Siang,Arunachal Pradesh,28.1667,95.0000,1680,43.2,150,1.00,2.9,3.1,2,Sandstone_Shale
+Cachar,Assam,24.8326,92.7789,22,13.9,252,0.35,1.5,32.8,1,Alluvial
+Mairang,Meghalaya,25.5624,91.7134,780,36.4,182,0.92,2.6,6.8,3,Gneiss_Granite
+Saiha,Mizoram,22.4892,92.9704,896,32.1,138,0.82,2.4,7.6,2,Sandstone_Shale
+Thoubal,Manipur,24.6363,94.0119,781,11.6,198,0.28,1.3,38.4,1,Alluvial
+Longding,Arunachal Pradesh,27.3667,95.5833,920,40.6,158,0.98,2.8,4.2,2,Sandstone_Shale
+Goalpara,Assam,26.1681,90.6245,38,9.8,232,0.20,1.1,46.2,1,Alluvial

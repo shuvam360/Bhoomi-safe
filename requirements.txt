@@ -1,0 +1,6 @@
+# BhoomiSafe — Unified Application Requirements
+# Target Python Version: 3.11.x or 3.12.x
+# Compatible with Linux, Windows, macOS (Pre-built wheels on PyPI)
+
+-r backend/requirements.txt
+-r ml/requirements.txt

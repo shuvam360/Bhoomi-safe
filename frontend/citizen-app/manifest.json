@@ -1,0 +1,66 @@
+{
+  "name": "BhoomiSafe — Citizen Landslide Portal (NER)",
+  "short_name": "BhoomiSafe",
+  "description": "AI-based citizen landslide incident reporting and emergency safety grid for North East India.",
+  "id": "/citizen-app/",
+  "start_url": "/citizen-app/report.html",
+  "scope": "/citizen-app/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0d1b2a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "safety",
+    "government",
+    "utilities",
+    "weather"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Report Landslide",
+      "short_name": "Report",
+      "description": "Submit a quick ground incident report",
+      "url": "/citizen-app/report.html",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Safety Precautions",
+      "short_name": "Safety",
+      "description": "View monsoon safety protocols and helplines",
+      "url": "/citizen-app/index.html",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

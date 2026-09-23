@@ -1,0 +1,645 @@
+/* Citizen App Styles — Lightweight & Accessible */
+:root {
+  --bg-color: #0d1b2a;
+  --card-bg: #1b263b;
+  --card-hover: #22324e;
+  --text-main: #e0e1dd;
+  --accent-red: #e63946;
+  --accent-blue: #415a77;
+  --accent-cyan: #48cae4;
+  --border-color: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  color-scheme: dark;
+}
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  padding: 12px;
+  color-scheme: dark;
+}
+
+.citizen-app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 8px;
+}
+
+/* Language Switcher */
+.lang-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.lang-switcher-wrapper:hover {
+  border-color: var(--accent-cyan);
+}
+.lang-globe-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.lang-select {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+.lang-select option {
+  background: #1b263b;
+  color: #fff;
+}
+
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #94a3b8;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.header-page-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.emergency-bar {
+  background-color: rgba(230, 57, 70, 0.2);
+  border: 1px solid var(--accent-red);
+  color: #ffb4a2;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 12px 0;
+}
+.emergency-bar a { color: #fff; text-decoration: underline; }
+
+.hero-card {
+  background: linear-gradient(135deg, #1b263b, #0d1b2a);
+  border: 1px solid var(--accent-cyan);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.hero-card h2 { font-size: 1.1rem; color: #fff; margin-bottom: 8px; }
+.hero-card p { font-size: 0.85rem; color: #8899a6; margin-bottom: 16px; }
+
+.btn-primary-lg {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-primary-lg:hover { background: #d62828; }
+
+.btn-report-header {
+  background: var(--accent-red);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.back-link { color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem; }
+
+.card {
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #94a3b8;
+  letter-spacing: 0.2px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="file"],
+.form-group textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #14213d;
+  color: #f8fafc;
+  font-size: 0.92rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  color-scheme: dark;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  background-color: #1a2c50;
+  box-shadow: 0 0 0 3px rgba(72, 202, 228, 0.2);
+}
+
+/* Custom Select & Options Styling */
+select,
+.form-group select {
+  width: 100%;
+  padding: 11px 38px 11px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #14213d;
+  color: #f8fafc;
+  font-size: 0.92rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2348cae4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  transition: all 0.2s ease;
+  color-scheme: dark;
+}
+
+select:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  background-color: #1a2c50;
+  box-shadow: 0 0 0 3px rgba(72, 202, 228, 0.25);
+}
+
+/* Dropdown Menu Options Styling (Fixes invisible/white-on-white text in Chrome/Android) */
+select option,
+.form-group select option {
+  background-color: #0d1b2a !important;
+  color: #ffffff !important;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+select option:checked,
+.form-group select option:checked {
+  background: #1b3a5f !important;
+  background-color: #1b3a5f !important;
+  color: #48cae4 !important;
+  font-weight: 600;
+}
+
+select option:hover,
+.form-group select option:hover {
+  background: #1f375b !important;
+  background-color: #1f375b !important;
+  color: #ffffff !important;
+}
+
+select optgroup,
+.form-group select optgroup {
+  background-color: #08111d !important;
+  color: #94a3b8 !important;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+.gps-box { display: flex; align-items: center; gap: 10px; }
+.btn-gps {
+  background: var(--accent-blue);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.gps-status { font-size: 0.75rem; color: #8899a6; }
+.gps-status.success { color: #48cae4; font-weight: 600; }
+
+.response-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.response-message.success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid #22c55e;
+  color: #86efac;
+}
+.response-message.queued {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid #f59e0b;
+  color: #fde68a;
+}
+.response-message.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+.response-message.info {
+  background: rgba(72, 202, 228, 0.15);
+  border: 1px solid var(--accent-cyan);
+  color: #e0f2fe;
+}
+
+/* Connection Status Indicator */
+.connection-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.connection-status-bar.online {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+.connection-status-bar.offline {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fde047;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.connection-status-bar.online .status-dot {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+}
+.connection-status-bar.offline .status-dot {
+  background: #eab308;
+  box-shadow: 0 0 6px rgba(234, 179, 8, 0.6);
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Offline Queue Notice */
+.queue-notice {
+  background: rgba(65, 90, 119, 0.3);
+  border: 1px solid var(--accent-cyan);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+}
+.queue-notice-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.btn-sync-now {
+  background: var(--accent-cyan);
+  color: #0d1b2a;
+  border: none;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-sync-now:hover {
+  opacity: 0.85;
+}
+
+.hidden { display: none !important; }
+
+footer { text-align: center; font-size: 0.7rem; color: #6c757d; margin-top: 30px; padding: 12px; }
+
+/* ─────────────────────────────────────────────
+   PWA Install Web App Button & Modal
+   ───────────────────────────────────────────── */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.btn-install-app {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, rgba(72, 202, 228, 0.22), rgba(0, 180, 216, 0.38));
+  border: 1.5px solid var(--accent-cyan);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(72, 202, 228, 0.25);
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.btn-install-app:hover {
+  background: linear-gradient(135deg, rgba(72, 202, 228, 0.32), rgba(0, 180, 216, 0.48));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 202, 228, 0.35);
+  border-color: #90e0ef;
+}
+
+.btn-install-app:active {
+  transform: translateY(0);
+}
+
+.btn-install-app svg {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-install-app:hover svg {
+  transform: translateY(1px);
+}
+
+.btn-install-app.installed {
+  background: rgba(34, 197, 94, 0.18);
+  border-color: #22c55e;
+  color: #86efac;
+  cursor: default;
+}
+
+.btn-install-app.installed svg {
+  color: #22c55e;
+}
+
+/* Install Guide Modal (For iOS / manual install) */
+.install-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 9, 20, 0.82);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 10000;
+  animation: fadeInModal 0.2s ease-out;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.install-modal-card {
+  background: #14213d;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 14px;
+  max-width: 420px;
+  width: 100%;
+  padding: 22px;
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.install-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.install-modal-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.install-modal-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 6px;
+  transition: color 0.15s;
+}
+
+.install-modal-close:hover {
+  color: #fff;
+}
+
+.install-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 14px 0 18px;
+}
+
+.install-modal-step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+.install-step-num {
+  background: rgba(72, 202, 228, 0.2);
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.install-modal-btn-done {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent-cyan);
+  color: #0d1b2a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.install-modal-btn-done:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px 10px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .app-header {
+    padding: 8px 0 10px;
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+  .brand-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-name {
+    font-size: 1.05rem;
+  }
+  .brand-subtitle {
+    font-size: 0.64rem;
+  }
+  .header-page-title {
+    font-size: 0.98rem;
+  }
+  .header-actions {
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .btn-install-app {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+  .lang-switcher-wrapper {
+    padding: 3px 5px;
+    gap: 3px;
+  }
+  .lang-select {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .btn-install-app .install-label {
+    display: none;
+  }
+  .btn-install-app {
+    padding: 5px 6px;
+  }
+}
+
+
+

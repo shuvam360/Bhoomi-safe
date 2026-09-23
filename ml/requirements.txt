@@ -1,0 +1,11 @@
+# BhoomiSafe — ML & Data Engineering Requirements
+# Pinned for Python 3.11 / 3.12 (guaranteed binary wheel support on PyPI)
+
+numpy>=1.26.4,<2.1.0
+pandas>=2.2.0,<3.0.0
+scikit-learn>=1.4.0,<1.6.0
+xgboost>=2.0.3,<2.2.0
+scipy>=1.12.0,<1.15.0
+matplotlib>=3.8.0,<3.10.0
+seaborn>=0.13.0,<0.14.0
+joblib>=1.3.2,<1.5.0
