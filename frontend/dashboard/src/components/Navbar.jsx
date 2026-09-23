@@ -355,7 +355,7 @@ export default function Navbar() {
 
         {/* Citizen Portal */}
         <a
-          href="/citizen-app/index.html"
+          href={`${import.meta.env.BASE_URL}citizen-app/index.html`}
           target="_blank"
           rel="noopener noreferrer"
           style={{

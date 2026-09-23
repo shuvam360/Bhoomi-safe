@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/Bhoomi-safe/' : '/',
   plugins: [
     react(),
     {

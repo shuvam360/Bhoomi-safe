@@ -12,7 +12,7 @@ import AdminLogin from './pages/AdminLogin';
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="app-layout">
           <Navbar />
           <main className="main-content">
