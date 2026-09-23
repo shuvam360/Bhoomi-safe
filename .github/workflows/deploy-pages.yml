@@ -40,8 +40,8 @@ jobs:
         working-directory: frontend/dashboard
         env:
           GITHUB_PAGES: 'true'
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
-          VITE_CARTO_API_KEY: ${{ vars.VITE_CARTO_API_KEY || 'cb1_3v9f_1_db37a53db18da3d4cf8ebd00' }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL || vars.VITE_API_URL || 'https://bhoomi-safe.onrender.com' }}
+          VITE_CARTO_API_KEY: ${{ secrets.VITE_CARTO_API_KEY || vars.VITE_CARTO_API_KEY || 'cb1_3v9f_1_db37a53db18da3d4cf8ebd00' }}
         run: npm run build
 
       - name: Setup Pages

@@ -24,6 +24,9 @@ const getBaseApiUrl = () => {
   } catch (e) {
     // Ignore storage errors in restricted contexts
   }
+  if (window.location && window.location.hostname.includes('github.io')) {
+    return 'https://bhoomi-safe.onrender.com';
+  }
   return 'http://localhost:8000';
 };
 

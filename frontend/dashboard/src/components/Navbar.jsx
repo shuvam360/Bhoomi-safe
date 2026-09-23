@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { getApiUrl } from '../utils/api';
 import {
   Map,
   Bell,
@@ -31,7 +32,7 @@ export default function Navbar() {
     let mounted = true;
     const check = async (isRetry = false) => {
       try {
-        const r = await fetch('/api/v1/health', { signal: AbortSignal.timeout(2000) });
+        const r = await fetch(getApiUrl('/api/v1/health'), { signal: AbortSignal.timeout(8000) });
         if (!mounted) return;
         if (r.ok) {
           setBackendStatus('online');
@@ -39,7 +40,7 @@ export default function Navbar() {
         }
       } catch {
         try {
-          const direct = await fetch('http://127.0.0.1:8000/api/v1/health', { signal: AbortSignal.timeout(2000) });
+          const direct = await fetch(getApiUrl('/health'), { signal: AbortSignal.timeout(8000) });
           if (!mounted) return;
           if (direct.ok) {
             setBackendStatus('online');
@@ -47,7 +48,7 @@ export default function Navbar() {
           }
         } catch {
           if (!isRetry) {
-            setTimeout(() => { if (mounted) check(true); }, 300);
+            setTimeout(() => { if (mounted) check(true); }, 500);
             return;
           }
         }
