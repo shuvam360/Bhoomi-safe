@@ -65,6 +65,17 @@ export default function Navbar() {
             return;
           }
         } catch {
+          try {
+            // Cloud backend fallback if running standalone or local process is asleep
+            const cloud = await fetch('https://bhoomi-safe.onrender.com/health', { signal: AbortSignal.timeout(8000) });
+            if (!mounted) return;
+            if (cloud.ok) {
+              setBackendStatus('online');
+              return;
+            }
+          } catch {
+            // Both checks failed
+          }
           if (!isRetry) {
             setTimeout(() => { if (mounted) check(true); }, 500);
             return;
