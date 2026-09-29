@@ -60,6 +60,11 @@ NER_DISTRICT_COORDS = {
     "Nongpoh":          (25.9005, 91.8754),
     "East Jaintia Hills": (25.3218, 92.1809),
     "Anjaw":            (28.0667, 96.8333),
+    # ── Darjeeling Himalayan Region (West Bengal) ──
+    "Darjeeling":       (27.0410, 88.2663),
+    "Kalimpong":        (27.0660, 88.4700),
+    "Mirik":            (26.8880, 88.1835),
+    "Kurseong":         (26.8826, 88.2788),
 }
 
 

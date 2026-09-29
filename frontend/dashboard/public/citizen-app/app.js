@@ -348,7 +348,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         'Cherrapunji': 'Meghalaya', 'Shillong': 'Meghalaya',
         'Jiribam': 'Manipur', 'Imphal': 'Manipur',
         'Silchar': 'Assam', 'Aizawl': 'Mizoram',
-        'Kohima': 'Nagaland', 'Itanagar': 'Arunachal Pradesh'
+        'Kohima': 'Nagaland', 'Itanagar': 'Arunachal Pradesh',
+        'Darjeeling': 'West Bengal', 'Kalimpong': 'West Bengal',
+        'Mirik': 'West Bengal', 'Kurseong': 'West Bengal'
       };
 
       const payload = {

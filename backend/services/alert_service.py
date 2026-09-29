@@ -34,6 +34,7 @@ NER_EMERGENCY_CONTACTS = {
     "Tripura": {"sms": "+913812000000", "name": "TSDMA (Tripura State DMA)"},
     "Arunachal Pradesh": {"sms": "+913602000000", "name": "APSDMA (Arunachal State DMA)"},
     "Sikkim": {"sms": "+913592000000", "name": "SSDMA (Sikkim State DMA)"},
+    "West Bengal": {"sms": "+913532000000", "name": "WBSDMA (West Bengal State DMA - Darjeeling Division)"},
 }
 
 

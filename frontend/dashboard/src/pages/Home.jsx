@@ -22,6 +22,8 @@ const FALLBACK_DISTRICTS = [
   { district: 'Itanagar',    state: 'Arunachal', latitude: 27.0844, longitude: 93.6053, probability: 0.74, risk_level: 'HIGH',      rainfall_24h_mm: 210.4 },
   { district: 'Lunglei',     state: 'Mizoram',   latitude: 22.8879, longitude: 92.7378, probability: 0.89, risk_level: 'VERY_HIGH', rainfall_24h_mm: 198.7 },
   { district: 'Dawki',       state: 'Meghalaya', latitude: 25.1667, longitude: 92.0167, probability: 0.94, risk_level: 'VERY_HIGH', rainfall_24h_mm: 255.2 },
+  { district: 'Darjeeling',  state: 'West Bengal', latitude: 27.0410, longitude: 88.2663, probability: 0.81, risk_level: 'VERY_HIGH', rainfall_24h_mm: 232.5 },
+  { district: 'Kalimpong',   state: 'West Bengal', latitude: 27.0660, longitude: 88.4700, probability: 0.72, risk_level: 'HIGH',      rainfall_24h_mm: 186.4 },
 ];
 
 const SCENARIOS = {

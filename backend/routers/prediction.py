@@ -42,6 +42,9 @@ DISTRICT_STATE_MAP = {
     "Churachandpur": "Manipur", "Dawki": "Meghalaya", "Senapati": "Manipur",
     "Tamenglong": "Manipur", "Ukhrul": "Manipur", "Nongpoh": "Meghalaya",
     "East Jaintia Hills": "Meghalaya", "Anjaw": "Arunachal Pradesh",
+    # Darjeeling Himalayan Region (West Bengal)
+    "Darjeeling": "West Bengal", "Kalimpong": "West Bengal",
+    "Mirik": "West Bengal", "Kurseong": "West Bengal",
 }
 
 
